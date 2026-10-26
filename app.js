@@ -111,7 +111,18 @@
     document.querySelectorAll('[data-cat]').forEach(function (c) { c.classList.toggle('hidden', b.dataset.filter !== 'all' && c.dataset.cat !== b.dataset.filter); }); }; });
 
   /* ---------- Badge flip ---------- */
-  document.querySelectorAll('.badge').forEach(function (b) { b.tabIndex = 0; b.onclick = function () { b.classList.toggle('flip'); }; b.onkeydown = function (e) { if (e.key === 'Enter') b.click(); }; });
+  document.querySelectorAll('.badge').forEach(function (b) { b.tabIndex = 0;
+    b.onclick = function (e) { if (e.target.closest('.cert-open')) return; b.classList.toggle('flip'); };
+    b.onkeydown = function (e) { if (e.key === 'Enter') b.click(); }; });
+
+  /* ---------- Certificate images: certs/<name>.jpg, .jpeg or .png (first one found wins) ---------- */
+  document.querySelectorAll('.cert-img').forEach(function (img) {
+    var exts = ['.jpg', '.jpeg', '.png'], k = 0, link = img.parentNode.querySelector('.cert-open');
+    function tryNext() { if (k >= exts.length) { img.alt = 'Certificate image missing'; return; } img.src = img.dataset.cert + exts[k++]; }
+    img.onerror = tryNext;
+    img.onload = function () { if (link) link.href = img.src; };
+    tryNext();
+  });
 
   /* ---------- ctOS-style profiler on hover ---------- */
   var pf = document.getElementById('profiler');
