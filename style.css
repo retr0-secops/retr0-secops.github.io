@@ -123,7 +123,7 @@ header.hero{position:relative;min-height:88vh;display:flex;align-items:center;ov
 #term input{flex:1;background:transparent;border:0;color:inherit;font:inherit;outline:none}
 
 /* ===== Boot screen ===== */
-#boot{position:fixed;inset:0;z-index:100;background:#030405;color:#2bd47d;font-size:.9rem;padding:24px;display:none;flex-direction:column;justify-content:flex-end;white-space:pre-wrap}
+#boot{position:fixed;inset:0;z-index:100;background:#030405;color:#2bd47d;font-size:clamp(.7rem,1.6vw,1rem);padding:24px;display:none;flex-direction:column;justify-content:flex-end;white-space:pre;overflow:hidden;text-shadow:0 0 6px rgba(43,212,125,.6)}
 #boot.show{display:flex}
 #boot .skip{position:absolute;top:14px;right:14px}
 

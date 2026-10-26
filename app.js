@@ -13,22 +13,48 @@
   var boot = document.getElementById('boot');
   if (boot && !store('booted') && !reduce) {
     var lines = [
-      '> initialising portfolio_os v2.6 ...',
-      '> loading city-wide profiler ......... ok',
-      '> checking for white rabbits ......... 1 found',
-      '> mounting /home/roheeth ............. ok',
-      '> decrypting skills.db ............... ok',
+      'portfolio_os bootloader v2.6 (c) roheeth_labs',
+      '----------------------------------------------',
+      '[ 0.000] BIOS check ......................... ok',
+      '[ 0.012] memory test: 64K of nostalgia ...... ok',
+      '[ 0.031] detecting CPU: caffeine-powered x1 .. ok',
+      '[ 0.054] mounting /dev/brain ................ ok',
+      '[ 0.077] mounting /home/roheeth ............. ok',
+      '[ 0.102] loading kernel modules:',
+      '           appsec.ko ........................ loaded',
+      '           mobile_android_ios.ko ............ loaded',
+      '           cloud_azure_gcp.ko ............... loaded',
+      '           threat_model_stride.ko ........... loaded',
+      '           devsecops_pipeline.ko ............ loaded',
+      '           ai_mcp_security.ko ............... loaded',
+      '[ 0.188] starting network services .......... ok',
+      '[ 0.203] connecting to city grid ............ ok',
+      '[ 0.229] loading city-wide profiler ......... ok',
+      '[ 0.251] syncing with the OASIS ............. ok',
+      '[ 0.274] checking for white rabbits ......... 1 found',
+      '[ 0.298] counting secrets ................... too many',
+      '[ 0.316] decrypting skills.db ............... ok',
+      '[ 0.340] decrypting certs.db (11 badges) .... ok',
+      '[ 0.362] loading experience: 5 years ........ ok',
+      '[ 0.381] hiding 3 keys across the site ...... done',
+      '[ 0.405] starting terminal on tty` .......... ok',
+      '[ 0.427] calibrating glitch effects ......... ok',
+      '[ 0.449] warming up the matrix rain ......... ok',
+      '[ 0.470] running final integrity check ...... passed',
+      '----------------------------------------------',
+      'all systems nominal.',
       '',
       'Hello, friend.'
     ];
     boot.classList.add('show');
-    var out = boot.querySelector('.out'), i = 0;
-    var finish = function () { boot.classList.remove('show'); store('booted', '1'); };
+    var bootOut = boot.querySelector('.out'), bi = 0, stopped = false;
+    var finish = function () { stopped = true; boot.classList.remove('show'); store('booted', '1'); };
     boot.querySelector('.skip').onclick = finish;
     (function next() {
-      if (i >= lines.length) return setTimeout(finish, 900);
-      out.textContent += lines[i++] + '\n';
-      setTimeout(next, 260);
+      if (stopped) return;
+      if (bi >= lines.length) return setTimeout(finish, 1400);
+      bootOut.textContent += lines[bi++] + '\n';
+      setTimeout(next, bi < 3 ? 400 : 175);
     })();
   }
 
@@ -148,7 +174,7 @@
     skills: 'AppSec (web/mobile/API) | AI & MCP security | Azure & GCP audits | STRIDE | DevSecOps',
     work: 'Photon Interactive (2021-24) -> Bahwan CyberTek (2024-now). See the nav.',
     certs: 'CAP, CCSP-AWS, API Security Architect, Splunk SOC, Android Bug Bounty, +6 more.',
-    contact: 'roheeth.s.it@gmail.com',
+    contact: 'email: roheeth.s.it@gmail.com\nlinkedin: https://www.linkedin.com/in/roheeth-s-057416166/\ncredly: https://www.credly.com/users/roheeth-s/badges/credly',
     keys: function () { return 'Keys found: ' + KEYS.filter(hasKey).join(', ') + (KEYS.some(hasKey) ? '' : 'none yet') + '. Hints: greet me properly · old cheat codes still work · look for a tiny dot.'; },
     'hello friend': function () { giveKey('copper', 'you greeted the terminal'); return 'Hello, friend. Here is something for you: the COPPER key.'; },
     'shall we play a game': function () { var h = document.getElementById('hunt'); if (h) { closeTerm(); h.scrollIntoView(); return ''; } return 'How about The Hunt? It lives on the home page.'; },
