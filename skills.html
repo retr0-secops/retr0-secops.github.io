@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toolkit | Roheeth Sankaralingam</title>
+<meta name="description" content="Skills, tools, and the DevSecOps demo project.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="boot"><button class="btn skip">skip ›</button><div class="out"></div></div>
+<div id="xfade"></div>
+<div id="progress"></div>
+<div id="profiler"></div>
+<nav class="top"><div class="wrap"><a class="brand" href="index.html">roheeth@ctos:~$</a><div class="links"><a href="index.html">home</a><a href="skills.html" class="on">skills</a><a href="photon.html">photon</a><a href="bahwan.html">bahwan</a><a href="resume.html">recruiter view</a></div></div></nav>
+
+<section style="padding-top:40px"><div class="wrap">
+  <h2 class="reveal">toolkit</h2>
+  <p class="muted reveal">Hover a card to profile it. Filter by area.</p>
+  <div class="tabs reveal"><button class="tab active" data-filter="all">all</button><button class="tab" data-filter="app">application</button><button class="tab" data-filter="ai">ai + mcp</button><button class="tab" data-filter="cloud">cloud + design</button><button class="tab" data-filter="devsecops">devsecops</button></div>
+  <div class="grid"><div class="card reveal" data-cat="app" data-profile="AppSec|web + api|intercept everything|95"><img src="gif/tool-zap.gif" alt="Animation: Web & API testing" loading="lazy"><h3>Web & API testing</h3><p>Burp Suite Pro, OWASP ZAP, Postman, Vooki.</p></div><div class="card reveal" data-cat="app" data-profile="AppSec|api|status codes tell stories|85"><img src="gif/tool-api.gif" alt="Animation: API clients" loading="lazy"><h3>API clients</h3><p>Request crafting and response review.</p></div><div class="card reveal" data-cat="app" data-profile="Mobile|android + ios|runtime analysis|90"><img src="gif/tool-mobile.gif" alt="Animation: Mobile security" loading="lazy"><h3>Mobile security</h3><p>Android and iOS with MobSF and Frida.</p></div><div class="card reveal" data-cat="app" data-profile="Assessment|vapt|150+ cleared|92"><img src="gif/tool-vapt.gif" alt="Animation: VAPT" loading="lazy"><h3>VAPT</h3><p>Assessment, triage, retest, repeat.</p></div><div class="card reveal" data-cat="ai" data-profile="AI|mcp|newest attack surface|88"><img src="gif/tool-ai.gif" alt="Animation: AI & MCP security" loading="lazy"><h3>AI & MCP security</h3><p>Reviewing how models, guardrails, and tools interact.</p></div><div class="card reveal" data-cat="cloud" data-profile="Cloud|azure + gcp|least privilege fan|87"><img src="gif/tool-cloud.gif" alt="Animation: Cloud audits" loading="lazy"><h3>Cloud audits</h3><p>Azure and GCP configuration and access reviews.</p></div><div class="card reveal" data-cat="cloud" data-profile="Design|stride|break it on paper first|90"><img src="gif/tool-stride.gif" alt="Animation: Threat modelling" loading="lazy"><h3>Threat modelling</h3><p>STRIDE and architecture reviews.</p></div><div class="card reveal" data-cat="devsecops" data-profile="Pipeline|github + azure|shift left|93"><img src="gif/tool-pipeline.gif" alt="Animation: DevSecOps pipelines" loading="lazy"><h3>DevSecOps pipelines</h3><p>GitHub and Azure DevOps with security gates.</p></div><div class="card reveal" data-cat="devsecops" data-profile="Pipeline|jenkins|scan on every build|85"><img src="gif/tool-jenkins.gif" alt="Animation: CI/CD scanning" loading="lazy"><h3>CI/CD scanning</h3><p>Jenkins, Veracode, SonarQube, Checkmarx.</p></div><div class="card reveal" data-cat="devsecops" data-profile="SIEM|splunk|watch the spikes|80"><img src="gif/tool-splunk.gif" alt="Animation: Logging & monitoring" loading="lazy"><h3>Logging & monitoring</h3><p>Splunk dashboards and log pipelines.</p></div></div>
+</div></section>
+<section><div class="wrap">
+  <h2 class="reveal">featured project</h2>
+  <div class="card reveal" data-profile="Project|devsecops|public repo|95">
+    <img src="gif/tool-pipeline.gif" alt="Animation: DevSecOps pipeline" loading="lazy">
+    <h3>Juice Shop DevSecOps demo</h3>
+    <p>Integrated security tooling in a DevSecOps pipeline, built around the OWASP Juice Shop application.</p>
+    <p><a class="btn" href="https://github.com/retr0-secops/juiceshop-demojuice-shop-security-demo" target="_blank" rel="noopener">view on github</a></p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <p>© Roheeth Sankaralingam · built on the grid · views are my own</p>
+  <p><a class="btn alt" href="resume.html">recruiter view (plain resume)</a></p>
+  <p class="muted">Pop-culture nods are affectionate homages. All trademarks belong to their owners. No affiliation.</p>
+</div></footer>
+<div id="fx"><button class="btn" id="term-open">terminal [`]</button><button class="btn alt" id="theme">light mode</button></div>
+<div id="term" role="dialog" aria-label="Terminal"><div class="bar"><span>roheeth@portfolio_os</span><button id="term-close" aria-label="Close">×</button></div><div class="out" id="term-out"></div><div class="row"><span>$&nbsp;</span><input id="term-in" autocomplete="off" aria-label="Terminal input"></div></div>
+<script src="app.js"></script>
+</body>
+</html>
