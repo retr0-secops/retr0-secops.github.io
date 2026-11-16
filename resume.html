@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Roheeth Sankaralingam | Senior Security Engineer</title>
-<meta name="description" content="Roheeth Sankaralingam, Senior Security Engineer. Application, mobile, cloud, AI and MCP security, threat modelling and DevSecOps. Download resume.">
+<meta name="description" content="Roheeth Sankaralingam, Senior Security Engineer. Application, mobile, API, cloud, AI and MCP security, and DevSecOps. Download resume.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -129,6 +129,7 @@
   <nav>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
+    <a href="#tools">Tools</a>
     <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
     <a href="index.html">Interactive site ↗</a>
@@ -163,8 +164,9 @@
   <div>
     <section class="card">
       <h2>Summary</h2>
-      <p>Senior Security Engineer with 5 years of experience in application, mobile, and cloud security. I test web, mobile, and AI-enabled applications (including MCP integrations), run cloud security audits, perform threat modelling, and build DevSecOps pipelines that keep security inside delivery.</p>
-      <p>Experienced in eCommerce platform assessments and moving into FinTech. Open to <strong>Product Security</strong>, <strong>DevSecOps</strong>, and <strong>FinTech security</strong> roles.</p>
+      <p>Senior Security Engineer with 5 years of experience in application, mobile, API, and cloud security. At the World Bank Group, assesses AI-enabled applications and MCP server integrations for prompt injection, tool misuse, and data exposure risks.</p>
+      <p>Designs and builds complete DevSecOps pipelines with SAST, SCA, secrets, container, and DAST scanning, and develops AI automations and Python scripts that remove manual security work. Performs web, mobile, and API penetration testing and Azure cloud security audits.</p>
+      <p>Targeting <strong>Product Security</strong>, <strong>DevSecOps</strong>, and <strong>FinTech security</strong> roles.</p>
     </section>
 
     <section class="card">
@@ -180,26 +182,32 @@
       <h2>Experience</h2>
       <div class="job">
         <div class="job-head"><h3>Senior Security Analyst · <span class="co">Bahwan CyberTek</span></h3><span class="when">Sep 2024 – Present</span></div>
-        <div class="sub">Contract engagement with a global financial institution</div>
+        <div class="sub">Contractor, World Bank Group · Chennai</div>
         <ul>
-          <li>Conducted Azure cloud security audits covering configuration and access reviews.</li>
-          <li>Implemented DevSecOps pipelines with GitHub and Azure DevOps, embedding security scanning into delivery.</li>
-          <li>Performed web and mobile (Android and iOS) application security testing.</li>
-          <li>Performed AI and MCP security testing of AI-enabled applications and MCP server integrations.</li>
-          <li>Supported security assessments of applications within a financial ecosystem.</li>
+          <li>Assessed 10+ AI-enabled applications and MCP server integrations for prompt injection, tool misuse, and data exposure risks.</li>
+          <li>Perform secure architecture design and review with product teams daily across application and Azure cloud architecture, and audit Azure configurations and access controls, remediating 30+ misconfigurations.</li>
+          <li>Developed an AI chatbot for Azure DevOps DevSecOps pipelines that lets developers retrieve their security scan reports through chat, integrated with SharePoint using the OAuth 2.0 On-Behalf-Of (OBO) flow in Microsoft Entra ID.</li>
+          <li>Built an AI agent that verifies cloud configuration evidence against Azure Security Benchmark controls, and an access control analysis tool that reviews access across Azure cloud resources.</li>
+          <li>Designed and built complete DevSecOps pipelines in GitHub and Azure DevOps, integrating SAST (Snyk, Veracode, GitHub Advanced Security), SCA (Black Duck), secrets scanning (TruffleHog, GitHub Secret Scanning), container scanning (Trivy), and DAST (OWASP ZAP), reducing manual security gates.</li>
+          <li>Integrated Wiz with Azure enterprise application resources for cloud security posture visibility.</li>
+          <li>Built a Kanban board in Azure DevOps, integrated with an on-premises accreditation application, now used by the entire World Bank security team for ticket assignment.</li>
+          <li>Apply a risk-matrix-based risk acceptance path so teams can proceed with documented, approved risk, positioning security as a business enabler rather than a blocker.</li>
+          <li>Tested 50+ web, mobile (Android and iOS), and API applications across the World Bank Group's financial ecosystem against the OWASP Top 10, scoring findings with CVSS; identified 50+ vulnerabilities, 30% remediated before release.</li>
+          <li>Own retesting and remediation sign-off, present security risk to stakeholders and management, mentor junior analysts, and run secure-coding sessions for developers, maintaining testing methodology and playbooks.</li>
         </ul>
       </div>
       <div class="job">
         <div class="job-head"><h3>Senior Security Analyst · <span class="co">Photon Interactive</span></h3><span class="when">Sep 2021 – Sep 2024</span></div>
         <div class="sub">Chennai</div>
         <ul>
-          <li>Conducted regular post-deployment VAPT, finding and clearing 150+ vulnerabilities.</li>
-          <li>Worked on requirements for a PCI-DSS compliance audit.</li>
-          <li>Integrated Veracode source code scanning into the Jenkins CI/CD pipeline.</li>
-          <li>Automated GCP user onboarding and custom IAM role assignment with Terraform.</li>
-          <li>Performed API, Android, and iOS security testing for client applications.</li>
-          <li>Hardened Sitecore-based ASP.NET applications and automated the audit with Python.</li>
-          <li>Received the Client Appreciation Award for 2023.</li>
+          <li>Conducted regular post-deployment VAPT across 50+ web, mobile (Android and iOS), and API applications, finding and clearing 150+ vulnerabilities.</li>
+          <li>Performed API security testing for client applications using Vooki, Burp Suite Pro, and Postman.</li>
+          <li>Integrated Veracode source code scanning into the Jenkins CI/CD pipeline for automated post-deployment scans, reducing release-blocking findings.</li>
+          <li>Integrated Snyk to provide PCI-DSS compliance insights.</li>
+          <li>Automated GCP user onboarding and custom IAM role assignment for 100+ users with Terraform.</li>
+          <li>Hardened Sitecore-based ASP.NET applications and built a Python script to automate the hardening audit, saving 20+ hours per release.</li>
+          <li>Designed a CTF-style technical interview round for hiring freshers and entry-level security candidates.</li>
+          <li>Received the Client Appreciation Award (2023).</li>
         </ul>
       </div>
     </section>
@@ -225,11 +233,26 @@
   <aside>
     <section class="card" id="skills">
       <h2>Skills</h2>
-      <div class="group"><h4>Application security</h4><div class="chips"><span class="chip">Web</span><span class="chip">API</span><span class="chip">Android</span><span class="chip">iOS</span><span class="chip">VAPT</span></div></div>
-      <div class="group"><h4>AI security</h4><div class="chips"><span class="chip">AI-enabled apps</span><span class="chip">MCP integrations</span></div></div>
-      <div class="group"><h4>Cloud &amp; architecture</h4><div class="chips"><span class="chip">Azure</span><span class="chip">GCP</span><span class="chip">STRIDE</span><span class="chip">Architecture reviews</span></div></div>
-      <div class="group"><h4>DevSecOps</h4><div class="chips"><span class="chip">GitHub</span><span class="chip">Azure DevOps</span><span class="chip">Jenkins</span><span class="chip">Terraform</span><span class="chip">Splunk</span></div></div>
-      <div class="group"><h4>Tools</h4><div class="chips"><span class="chip">Burp Suite Pro</span><span class="chip">OWASP ZAP</span><span class="chip">Checkmarx</span><span class="chip">Veracode</span><span class="chip">SonarQube</span><span class="chip">MobSF</span><span class="chip">Frida</span><span class="chip">Postman</span><span class="chip">Nessus</span><span class="chip">Nmap</span></div></div>
+      <div class="group"><h4>Security testing</h4><div class="chips"><span class="chip">Web, API, Android &amp; iOS pentesting</span><span class="chip">AI &amp; MCP security testing</span><span class="chip">VAPT</span><span class="chip">Secure code review</span><span class="chip">OWASP Top 10</span><span class="chip">STRIDE threat modelling</span><span class="chip">CMS hardening (Sitecore / ASP.NET)</span></div></div>
+      <div class="group"><h4>Risk management</h4><div class="chips"><span class="chip">CVSS scoring</span><span class="chip">Risk-matrix-based risk acceptance</span></div></div>
+      <div class="group"><h4>DevSecOps</h4><div class="chips"><span class="chip">CI/CD security pipelines</span><span class="chip">GitHub Actions</span><span class="chip">Azure DevOps</span><span class="chip">Jenkins</span><span class="chip">Docker</span><span class="chip">Kubernetes</span></div></div>
+      <div class="group"><h4>Cloud security</h4><div class="chips"><span class="chip">Azure security audits</span><span class="chip">Azure Security Benchmark</span><span class="chip">Microsoft Defender for Cloud</span><span class="chip">Wiz</span><span class="chip">Entra ID (OAuth 2.0 OBO)</span><span class="chip">AWS IAM</span><span class="chip">GCP IAM</span></div></div>
+      <div class="group"><h4>Scripting &amp; automation</h4><div class="chips"><span class="chip">Python</span><span class="chip">Bash</span><span class="chip">PowerShell</span><span class="chip">Terraform</span><span class="chip">AI agents &amp; chatbots</span></div></div>
+    </section>
+
+    <section class="card" id="tools">
+      <h2>Tools</h2>
+      <div class="group"><h4>SAST</h4><div class="chips"><span class="chip">Snyk</span><span class="chip">Veracode</span><span class="chip">Checkmarx</span><span class="chip">GitHub Advanced Security</span></div></div>
+      <div class="group"><h4>SCA</h4><div class="chips"><span class="chip">Black Duck</span><span class="chip">OWASP Dependency-Check</span></div></div>
+      <div class="group"><h4>Secrets scanning</h4><div class="chips"><span class="chip">TruffleHog</span><span class="chip">GitHub Secret Scanning</span><span class="chip">Gitleaks</span></div></div>
+      <div class="group"><h4>Container &amp; IaC</h4><div class="chips"><span class="chip">Trivy</span><span class="chip">Checkov</span></div></div>
+      <div class="group"><h4>DAST</h4><div class="chips"><span class="chip">OWASP ZAP</span><span class="chip">Burp Suite Pro</span><span class="chip">Vooki</span><span class="chip">Nikto</span></div></div>
+      <div class="group"><h4>AI red teaming</h4><div class="chips"><span class="chip">PyRIT</span><span class="chip">DeepTeam</span></div></div>
+      <div class="group"><h4>MCP security</h4><div class="chips"><span class="chip">Snyk Agent Scan</span><span class="chip">Burp Suite Pro (MCP traffic tampering)</span></div></div>
+      <div class="group"><h4>Cloud security posture</h4><div class="chips"><span class="chip">Wiz</span><span class="chip">Microsoft Defender for Cloud</span></div></div>
+      <div class="group"><h4>Network</h4><div class="chips"><span class="chip">Nmap</span><span class="chip">Metasploit</span><span class="chip">Hydra</span></div></div>
+      <div class="group"><h4>Mobile</h4><div class="chips"><span class="chip">MobSF</span><span class="chip">Frida</span><span class="chip">Burp Suite Pro</span><span class="chip">palera1n &amp; Dopamine (iOS jailbreak)</span></div></div>
+      <div class="group"><h4>API</h4><div class="chips"><span class="chip">Burp Suite Pro</span><span class="chip">Postman</span><span class="chip">Kong Insomnia</span><span class="chip">Vooki</span></div></div>
     </section>
 
     <section class="card" id="certifications">
@@ -248,7 +271,14 @@
 
     <section class="card">
       <h2>Education</h2>
-      <p><strong>B.Tech., Information Technology</strong><br><span class="small">Easwari Engineering College, Chennai · 2017 – 2021</span></p>
+      <p><strong>B.Tech., Information Technology</strong><br><span class="small">Easwari Engineering College, Chennai · Sep 2017 – Apr 2021</span></p>
+      <p><strong>HSC &amp; SSLC</strong><br><span class="small">Modern Senior Secondary School, Chennai · Apr 2015 – Apr 2017</span></p>
+    </section>
+
+    <section class="card">
+      <h2>Languages &amp; interests</h2>
+      <p><strong>Languages:</strong> English, Tamil, Hindi</p>
+      <p class="small"><strong>Interests:</strong> Building computers, taking apart motorbikes, smashing badminton shuttles, cooking, excessive reading, and solving puzzles</p>
     </section>
 
     <section class="card" id="contact">

@@ -182,8 +182,8 @@
   var cmds = {
     help: 'whoami · skills · work · certs · contact · keys · hello friend · shall we play a game · matrix · ctos · recruiter · clear',
     whoami: 'roheeth :: Senior Security Engineer :: 5 yrs :: breaks things so you don\'t have to.',
-    skills: 'AppSec (web/mobile/API) | AI & MCP security | Azure & GCP audits | STRIDE | DevSecOps',
-    work: 'Photon Interactive (2021-24) -> Bahwan CyberTek (2024-now). See the nav.',
+    skills: 'AppSec (web/mobile/API) | AI & MCP security | Azure cloud security | STRIDE | DevSecOps pipelines | security automation',
+    work: 'Photon Interactive (2021-24) -> Bahwan CyberTek, contractor for the World Bank Group (2024-now). See the nav.',
     certs: 'CAP, CCSP-AWS, API Security Architect, Splunk SOC, Android Bug Bounty, +6 more.',
     contact: 'email: roheeth.s.it@gmail.com\nlinkedin: https://www.linkedin.com/in/roheeth-s-057416166/\ncredly: https://www.credly.com/users/roheeth-s/badges/credly',
     keys: function () { return 'Keys found: ' + KEYS.filter(hasKey).join(', ') + (KEYS.some(hasKey) ? '' : 'none yet') + '. Hints: greet me properly · old cheat codes still work · look for a tiny dot.'; },
